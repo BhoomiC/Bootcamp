@@ -18,13 +18,13 @@ enum Year{
 }
 
 @Retention(RetentionPolicy.CLASS)
-@Target(ElementType.PACKAGE)
+@Target(ElementType.TYPE)
 @interface Company{
     String name();
     String location();
 }
 @Retention(RetentionPolicy.SOURCE)
-@Target(ElementType.CONSTRUCTOR)
+@Target({ElementType.CONSTRUCTOR,ElementType.LOCAL_VARIABLE})
 @interface TimeStamp{
     Day day();
     Month month();
