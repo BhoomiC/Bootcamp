@@ -14,7 +14,6 @@ public class WriteDataInFile {
         car.add("Audi");
         car.add("Porsche");
         car.add("Rolls Royce");
-        BufferedWriter out = null;
         FileWriter write = null;
         try {
              write = new FileWriter("C:\\Users\\chhedab\\IdeaProjects\\Bootcamp\\27July\\cars.txt");
