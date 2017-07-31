@@ -1,0 +1,1 @@
+C is a functional programming language. It is closer to hardware.
