@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 /**
  * Created by chhedab on 7/31/2017.
  */
-public class WorkerPrint {
+public class WorkerPrint extends Thread {
     BlockingQueue<Runnable> taskQueue = null;
     WorkerPrint(BlockingQueue<Runnable> taskQueue){
         this.taskQueue = taskQueue;

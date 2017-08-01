@@ -10,9 +10,14 @@ import java.util.concurrent.BlockingQueue;
  */
 public class WorkerImplementation {
     BlockingQueue<Runnable> taskQueue = new ArrayBlockingQueue<Runnable>(7);
+    int i = 10;
 
 @Test
-    public void tesstThreads(){
+    public void testThreads(){
     WorkerValue workerValue = new WorkerValue(taskQueue);
+    WorkerPrint workerPrint = new WorkerPrint(taskQueue);
+    workerValue.start();
+    workerPrint.start();
+
 }
 }

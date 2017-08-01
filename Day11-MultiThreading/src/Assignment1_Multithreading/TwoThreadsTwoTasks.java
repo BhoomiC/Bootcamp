@@ -18,4 +18,12 @@ public class TwoThreadsTwoTasks {
 
         }
     }
+    @Test
+    public void test2loops(){
+        new Thread(() -> {for(int j = 0; j < 20; j ++){i++;}
+        }).start();
+        new Thread(() -> {for(int k = 0; k < 10; k++){
+            System.out.println("Value :" + i);}
+        }).start();
+    }
 }
