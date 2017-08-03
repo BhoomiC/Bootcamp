@@ -19,5 +19,46 @@
         <servlet-name>CricketMatchServlet</servlet-name>
         <url-pattern>/matchresults</url-pattern>
     </servlet-mapping>
-    
+    <filter-mapping>
+        <filter-name>ValidLocaleFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.cdk.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <filter-mapping>
+        <filter-name>ValidLocaleFilter</filter-name>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-name>WeatherServlet</servlet-name>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>com.cdk.servlet.NewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/news</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WeatherServlet</servlet-name>
+        <servlet-class>com.cdk.servlet.WeatherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WeatherServlet</servlet-name>
+        <url-pattern>/weather</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.cdk.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
 </web-app>
